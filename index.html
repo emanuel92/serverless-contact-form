@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kontaktformular mit AWS Lambda & Serverless</title>
+    </head>
+    <body>
+        <h1>Serverless Kontaktformular</h1>
+        <form action="https://vnr9mg0ega.execute-api.eu-west-1.amazonaws.com/prod/contact" method="POST">
+            <div>
+                <input type="text" name="name" placeholder="Example Name" />
+            </div>
+            <div>
+                <input type="text" name="email" placeholder="example@example.com" />
+            </div>
+            <div>
+                <textarea name="message" placeholder="Example Message"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Send" />
+            </div>
+        </form>
+    </body>
+</html>

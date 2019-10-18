@@ -1,0 +1,22 @@
+service: contact-form
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: prod
+  region: eu-west-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ses:SendEmail"
+        - "ses:SendRawEmail"
+      Resource: "*"
+
+functions:
+  sendForm:
+    handler: handler.processFormData
+    events:
+      - http:
+          path: contact
+          method: post
+          cors: true
