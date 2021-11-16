@@ -9,6 +9,6 @@
   "author": "James Kirkby <james@breaksagency.com>",
   "license": "ISC",
   "devDependencies": {
-    "aws-sdk": "^2.7.3"
+    "aws-sdk": "^2.814.0"
   }
 }
